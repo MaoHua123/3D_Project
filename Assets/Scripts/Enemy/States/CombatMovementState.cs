@@ -105,6 +105,9 @@ public class CombatMovementState : State<EnemyController>
     {
         state = AICombatStates.Idle;
         timer = Random.Range(idleTimeRange.x, idleTimeRange.y);
+
+        //停止寻路，否则NavMeshAgent仍会沿旧路径走向最后一次SetDestination的位置
+        enemy.NavAgent.ResetPath();
     }
     
     private void StartChase()

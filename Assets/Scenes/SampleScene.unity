@@ -335,8 +335,8 @@ Transform:
   m_GameObject: {fileID: 637005849}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.85662735, y: -1.8820179, z: -0.53449154}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -0.85662735, y: -0.65, z: -0.53449154}
+  m_LocalScale: {x: 2, y: 4.436, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1021606292}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -548,6 +548,11 @@ MonoBehaviour:
   framingOffset: {x: 0, y: 1}
   invertX: 0
   invertY: 1
+  obstaclelayer:
+    serializedVersion: 2
+    m_Bits: 64
+  cameraRadius: 0.2
+  wallOffset: 0.15
 --- !u!1 &1021606291
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c6de38affbc03b4ea65d9f9c21f0493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetEnemy: {fileID: 0}
 --- !u!114 &1912082840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,6 +853,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c170f827271fe4b47886c9afad711121, type: 2}
   - {fileID: 11400000, guid: 4bf7830d94a53dd45b4054e7b65886de, type: 2}
   sword: {fileID: 1996018630535903810}
+  rotationSpeed: 500
 --- !u!1 &2113060249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,7 +1324,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652557734942}
-  - component: {fileID: 5866666020903956068}
   m_Layer: 0
   m_Name: Paladin WProp J Nordstrom
   m_TagString: Untagged
@@ -2692,27 +2696,6 @@ Transform:
   - {fileID: 7410462539973602572}
   m_Father: {fileID: 2420202490963989249}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5866666020903956068
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148015312548}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 76316c4386714a441895a9a91e4b16e2, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2ef0504abd71b0942920264eaaf4bb5e, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 1
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &5901452234120324765
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 90f4baca58c013345891eb59d699c48b
+guid: ebde2f0c7a6f42e4bb9f195bd1269dd1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Sword And Shield Run
+      name: CombatMovement_Walk
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 21
+      lastFrame: 33
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

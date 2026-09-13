@@ -79,14 +79,16 @@ public class PlayerController : MonoBehaviour
                 targetRotation = Quaternion.LookRotation(targetVec);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 
                     rotationSpeed * Time.deltaTime);
-                
-                float forwardSpeed = Vector3.Dot(velocity, transform.forward);
-                animator.SetFloat("forwardSpeed", forwardSpeed / moveSpeed, 0.2f, Time.deltaTime);
-
-                float angle = Vector3.SignedAngle(transform.forward, velocity, Vector3.up);
-                float strafeSpeed = Mathf.Sin(angle * Mathf.Deg2Rad);
-                animator.SetFloat("strafeSpeed", strafeSpeed, 0.2f, Time.deltaTime);
             }
+
+            // 参数必须在每帧写入，无输入时velocity为0，自然归零回 Idle
+            // 若只在moveAmount>0时更新，停止输入后参数会冻结在最后非零值，动画卡在Walk
+            float forwardSpeed = Vector3.Dot(velocity, transform.forward);
+            animator.SetFloat("forwardSpeed", forwardSpeed / moveSpeed, 0.2f, Time.deltaTime);
+
+            float angle = Vector3.SignedAngle(transform.forward, velocity, Vector3.up);
+            float strafeSpeed = Mathf.Sin(angle * Mathf.Deg2Rad);
+            animator.SetFloat("strafeSpeed", strafeSpeed, 0.2f, Time.deltaTime);
         }
         else
         {

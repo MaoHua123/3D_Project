@@ -53,7 +53,7 @@ public class CombatController : MonoBehaviour
         if (Input.GetButtonDown("Attack1"))
         {
             var enemy = EnemyManager.instance.GetAttackingEnemy();
-            if(enemy != null && enemy.Fighter.IsCounterable && !meleeFighter.InAction)//TODO:InAction有疑问
+            if(enemy != null && enemy.Fighter.IsCounterable && !meleeFighter.InAction)
             {
                 StartCoroutine(meleeFighter.PerformCounterattack(enemy));
             }
