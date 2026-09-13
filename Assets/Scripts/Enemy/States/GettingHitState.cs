@@ -11,6 +11,10 @@ public class GettingHitState : State<EnemyController>
     public override void Enter(EnemyController owner)
     {
         enemy = owner;
+
+        //受击时停下寻路，避免敌人一边挨打一边继续走向旧目标
+        enemy.NavAgent.ResetPath();
+
         enemy.Fighter.OnHitComplet += () => StartCoroutine(GoToCombatMovement());
     }
 
